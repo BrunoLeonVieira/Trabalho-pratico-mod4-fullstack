@@ -39,7 +39,7 @@ app.use(cors()); //LIBERANDO TODOS ENDPOINT PARA ACESSO DE OUTROS DOMINIOS
 
 app.use("/account", account);
 
-app.listen(3003, async () => {
+app.listen(process.env.PORT || 8080, async () => {
   try {
     logger.info("API Started");
   } catch (error) {
