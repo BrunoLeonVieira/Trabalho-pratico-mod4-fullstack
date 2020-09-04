@@ -227,16 +227,6 @@ router.get("/topBalance", async (req, res, next) => {
   }
 });
 
-//TESTE
-router.get("/test", async (req, res, next) => {
-  try {
-    logger.info(`GET /test - ${JSON.stringify({ vitor: "otário" })}`);
-    res.send(JSON.stringify({ vitor: "otário" }));
-  } catch (error) {
-    next(error);
-  }
-});
-
 router.post("/processClientsPrivate", async (req, res, next) => {
   try {
     const agencias = await clientModel.distinct("agencia");
